@@ -41,9 +41,21 @@ void setup()
   pinMode(M4B, OUTPUT);
   pinMode(M4P, OUTPUT);
   pinMode(M4E, OUTPUT);
+  pinMode(M3A, OUTPUT);
+  pinMode(M3B, OUTPUT);
+  pinMode(M3P, OUTPUT);
+  pinMode(M3E, OUTPUT);
+  pinMode(M2A, OUTPUT);
+  pinMode(M2B, OUTPUT);
+  pinMode(M2P, OUTPUT);
+  pinMode(M2E, OUTPUT);
+  pinMode(M1A, OUTPUT);
+  pinMode(M1B, OUTPUT);
+  pinMode(M1P, OUTPUT);
+  pinMode(M1E, OUTPUT);
   
   Serial.begin(38400);              // Initiates the serial to do the monitoring 
-  Serial.println("kontrol");
+  Serial.println("kontrol bluetooth");
   
 
 }
@@ -58,6 +70,12 @@ void loop()
   x = Serial.read();
   delay(10);
   y = Serial.read();
+
+    digitalWrite(M4E, HIGH);
+    digitalWrite(M3E, HIGH);
+    digitalWrite(M2E, HIGH);
+    digitalWrite(M1E, HIGH);
+
   }
 
   delay(10);
